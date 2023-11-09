@@ -1,27 +1,7 @@
 server:
   port: 8080
 
-
 spring:
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://49.232.228.92:3306/rookie-stack?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
-    password: 8uhb^YJm
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
+  profiles:
+    active: dev
 
-
-mybatis-plus:
-  mapper-locations: classpath*:mybatis/*.xml
-  type-handlers-package: com.rookie.stack.api.common.handler
-
-
-logging:
-  config: classpath:logback.xml
-  level:
-    web: INFO
